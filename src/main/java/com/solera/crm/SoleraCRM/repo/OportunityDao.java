@@ -33,5 +33,13 @@ public class OportunityDao {
 		oportunities.remove(oportunities.stream().filter(oportynity -> oportynity.getIdOportunity().equals(id)).findFirst().get());
 	}
 	
-
+	public void updateOportunity(Oportunity oportunity) {
+		Oportunity o = oportunities.stream().filter(oportynity -> oportynity.getIdOportunity().equals(oportunity.getIdOportunity())).findFirst().get();
+		
+		o.setName(oportunity.getName());
+		o.setTelephone(oportunity.getTelephone());
+		o.setEmail(oportunity.getEmail());
+		o.setIs_client(oportunity.getIs_client());
+		o.setContacts(oportunity.getContacts());
+	}
 }
