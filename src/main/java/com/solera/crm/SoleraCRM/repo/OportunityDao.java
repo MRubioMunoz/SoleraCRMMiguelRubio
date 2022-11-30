@@ -15,10 +15,7 @@ public class OportunityDao {
 	public static List<Oportunity> oportunities = new ArrayList<>();
 	public static ArrayList<Contact> contacts = new ArrayList<>();
 	private static int ID =0;
-	
-	@Autowired
-	ContactDao contactService;
-	
+		
 	static {
 		
 		oportunities.add(new Oportunity(++ID,"Miguel" , "666333555", "miguel@solera.com", true, contacts));

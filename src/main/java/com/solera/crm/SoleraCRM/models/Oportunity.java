@@ -1,7 +1,6 @@
 package com.solera.crm.SoleraCRM.models;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Oportunity {
 

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.solera.crm.SoleraCRM.models.Contact;
 import com.solera.crm.SoleraCRM.models.Oportunity;
 import com.solera.crm.SoleraCRM.repo.ContactDao;
 import com.solera.crm.SoleraCRM.repo.OportunityDao;
@@ -27,5 +28,6 @@ class SoleraCrmApplicationTests {
 		assertEquals(oportunityDao.findById(1).getName(), "UpdateTest");
 		assertEquals(oportunityDao.findById(1).getEmail(), "test@solera.com");
 	}
+	
 
 }

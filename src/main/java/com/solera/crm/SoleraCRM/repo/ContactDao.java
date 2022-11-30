@@ -22,8 +22,9 @@ public class ContactDao {
 	}
 	
 	public void createContactByOportunityId(Integer id, Contact contact) {
+		contact.setidContact(++ID);
 		oportunityDao.findById(id).getContacts().add(contact);
-	}
 		
+	}
 	
 }
