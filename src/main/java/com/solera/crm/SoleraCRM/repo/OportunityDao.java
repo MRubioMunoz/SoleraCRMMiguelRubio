@@ -3,7 +3,6 @@ package com.solera.crm.SoleraCRM.repo;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.solera.crm.SoleraCRM.models.Contact;
@@ -13,13 +12,13 @@ import com.solera.crm.SoleraCRM.models.Oportunity;
 public class OportunityDao {
 	
 	public static List<Oportunity> oportunities = new ArrayList<>();
-	public static ArrayList<Contact> contacts = new ArrayList<>();
+	//public static ArrayList<Contact> contacts = new ArrayList<>();
 	private static int ID =0;
 		
 	static {
 		
-		oportunities.add(new Oportunity(++ID,"Miguel" , "666333555", "miguel@solera.com", true, contacts));
-		oportunities.add(new Oportunity(++ID,"Isabel" , "666777999", "isabel@solera.com", false, contacts));
+		oportunities.add(new Oportunity(++ID,"Miguel" , "666333555", "miguel@solera.com", true));
+		oportunities.add(new Oportunity(++ID,"Isabel" , "666777999", "isabel@solera.com", false));
 	}
 	
 	public List<Oportunity> findAll(){

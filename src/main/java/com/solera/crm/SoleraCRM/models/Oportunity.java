@@ -13,13 +13,13 @@ public class Oportunity {
 	
 	
 	
-	public Oportunity(Integer idOportunity, String name, String telephone, String email, Boolean is_client, ArrayList<Contact> contacts) {
+	public Oportunity(Integer idOportunity, String name, String telephone, String email, Boolean is_client) {
 		this.idOportunity = idOportunity;
 		this.name = name;
 		this.telephone = telephone;
 		this.email = email;
 		this.is_client = is_client;
-		this.contacts = contacts;
+		this.contacts = new ArrayList<>();
 	}
 	
 	

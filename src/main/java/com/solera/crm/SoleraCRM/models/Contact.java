@@ -8,14 +8,12 @@ public  class Contact{
 	private String type;
 	private LocalDate date;
 	private Boolean result;
-	private Integer idOportinuty;
 
 	public Contact(Integer idContact, String type, LocalDate date, Boolean result, Integer idOportunity) {
 		this.idContact = idContact;
 		this.type = type;
 		this.date = date;
 		this.result = result;
-		this.idOportinuty = idOportunity;
 	}
 
 	public Contact() {
@@ -53,17 +51,6 @@ public  class Contact{
 		this.result = result;
 	}
 
-	public Integer getIdOportinuty() {
-		return idOportinuty;
-	}
-
-	public void setIdOportinuty(Integer idOportinuty) {
-		this.idOportinuty = idOportinuty;
-	}
-
-
-	
-	
 }
 	
 	
