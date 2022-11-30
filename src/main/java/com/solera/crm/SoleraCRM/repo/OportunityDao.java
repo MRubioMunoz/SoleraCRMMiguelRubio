@@ -21,6 +21,17 @@ public class OportunityDao {
 		return oportunities;
 	}
 	
+	public Oportunity findOne(Long id) {
+		return oportunities.stream().filter(oportynity -> oportynity.getIdOportunity().equals(id)).findFirst().get();
+	}
 	
+	public void createOportunity(Oportunity oportunity) {
+		oportunities.add(oportunity);
+	}
 	
+	public void deleteOportunity(Long id) { 
+		oportunities.remove(oportunities.stream().filter(oportynity -> oportynity.getIdOportunity().equals(id)).findFirst().get());
+	}
+	
+
 }
