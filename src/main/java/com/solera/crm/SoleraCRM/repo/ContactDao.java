@@ -24,6 +24,9 @@ public class ContactDao {
 	
 	public void createContactByOportunityId(Integer id, Contact contact) {
 		contact.setidContact(++ID);
+		if(!oportunityDao.findById(id).getIs_client() && contact.getResult()) 
+			oportunityDao.findById(id).setIs_client(true);
+		
 		oportunityDao.findById(id).getContacts().add(contact);
 		
 	}
