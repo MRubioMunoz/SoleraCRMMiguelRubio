@@ -13,11 +13,12 @@ public class ContactDao {
 	
 
 	private static int ID = 0;
+	public static List<Contact> contacts = new ArrayList<>();
 	
 	@Autowired
 	OportunityDao oportunityDao;
 	
-	public List<Contact> findByOportunitytId(Integer id){
+	public ArrayList<Contact> findByOportunitytId(Integer id){
 		return oportunityDao.findById(id).getContacts();
 	}
 	

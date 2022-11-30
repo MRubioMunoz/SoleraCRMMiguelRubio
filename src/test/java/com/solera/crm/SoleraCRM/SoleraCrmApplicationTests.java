@@ -1,7 +1,8 @@
 package com.solera.crm.SoleraCRM;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,11 @@ class SoleraCrmApplicationTests {
 		assertEquals(oportunityDao.findById(1).getEmail(), "test@solera.com");
 	}
 	
-
+	@Test
+	void oportunityWithContactResultTrueIsAClient() {
+		//Integer idContact, String type, LocalDate date, Boolean result, Integer idOportunity
+		contactDao.createContactByOportunityId(2, new Contact(3,"test",LocalDate.now(), true, 2));
+		assertEquals(oportunityDao.findById(2).getIs_client(), oportunityDao.findById(2).getContacts().get(0).getResult());
+	}
+	
 }
