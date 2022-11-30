@@ -1,5 +1,6 @@
 package com.solera.crm.SoleraCRM.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Oportunity {
@@ -9,12 +10,11 @@ public class Oportunity {
 	private String telephone;
 	private String email;
 	private Boolean is_client;
-	private List<Contact> contacts;
+	private ArrayList<Contact> contacts;
 	
 	
 	
-	public Oportunity(Integer idOportunity, String name, String telephone, String email, Boolean is_client,
-			List<Contact> contacts) {
+	public Oportunity(Integer idOportunity, String name, String telephone, String email, Boolean is_client, ArrayList<Contact> contacts) {
 		this.idOportunity = idOportunity;
 		this.name = name;
 		this.telephone = telephone;
@@ -54,10 +54,10 @@ public class Oportunity {
 	public void setIs_client(Boolean is_client) {
 		this.is_client = is_client;
 	}
-	public List<Contact> getContacts() {
+	public ArrayList<Contact> getContacts() {
 		return contacts;
 	}
-	public void setContacts(List<Contact> contacts) {
+	public void setContacts(ArrayList<Contact> contacts) {
 		this.contacts = contacts;
 	}
 }

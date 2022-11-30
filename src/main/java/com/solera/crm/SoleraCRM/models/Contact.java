@@ -4,26 +4,28 @@ import java.time.LocalDate;
 
 public  class Contact{
 		
-	private int idContact;
+	private Integer idContact;
 	private String type;
 	private LocalDate date;
 	private Boolean result;
+	private Integer idOportinuty;
 
-	public Contact(int idContact, String type, LocalDate date, Boolean result) {
+	public Contact(Integer idContact, String type, LocalDate date, Boolean result, Integer idOportunity) {
 		this.idContact = idContact;
 		this.type = type;
 		this.date = date;
 		this.result = result;
+		this.idOportinuty = idOportunity;
 	}
 
 	public Contact() {
 	}
 
-	public int getidContact() {
+	public Integer getidContact() {
 		return idContact;
 	}
 
-	public void setidContact(int idContact) {
+	public void setidContact(Integer idContact) {
 		this.idContact = idContact;
 	}
 
@@ -50,6 +52,18 @@ public  class Contact{
 	public void setResult(Boolean result) {
 		this.result = result;
 	}
+
+	public Integer getIdOportinuty() {
+		return idOportinuty;
+	}
+
+	public void setIdOportinuty(Integer idOportinuty) {
+		this.idOportinuty = idOportinuty;
+	}
+
+
+	
+	
 }
 	
 	

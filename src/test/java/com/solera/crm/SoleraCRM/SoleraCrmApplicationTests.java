@@ -16,10 +16,13 @@ class SoleraCrmApplicationTests {
 	
 	@Autowired
 	OportunityDao oportunityDao;
+	
+	@Autowired
+	ContactDao contactDao;
 
 	@Test
 	void updateOportunityTest() {
-		Oportunity oUpdate = new Oportunity(1, "UpdateTest","666333555", "test@solera.com", false, ContactDao.contacts);
+		Oportunity oUpdate = new Oportunity(1, "UpdateTest","666333555", "test@solera.com", false, OportunityDao.contacts);
 		oportunityDao.updateOportunity(1,oUpdate);
 		assertEquals(oportunityDao.findById(1).getName(), "UpdateTest");
 		assertEquals(oportunityDao.findById(1).getEmail(), "test@solera.com");
