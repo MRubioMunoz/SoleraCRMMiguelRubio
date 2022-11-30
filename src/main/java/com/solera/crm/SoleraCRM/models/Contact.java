@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 public  class Contact{
 		
-	private Long idContact;
+	private int idContact;
 	private String type;
 	private LocalDate date;
 	private Boolean result;
 
-	public Contact(Long idContact, String type, LocalDate date, Boolean result) {
+	public Contact(int idContact, String type, LocalDate date, Boolean result) {
 		this.idContact = idContact;
 		this.type = type;
 		this.date = date;
@@ -19,11 +19,11 @@ public  class Contact{
 	public Contact() {
 	}
 
-	public Long getidContact() {
+	public int getidContact() {
 		return idContact;
 	}
 
-	public void setidContact(Long idContact) {
+	public void setidContact(int idContact) {
 		this.idContact = idContact;
 	}
 

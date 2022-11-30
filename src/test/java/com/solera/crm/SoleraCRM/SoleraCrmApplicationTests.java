@@ -1,6 +1,7 @@
 package com.solera.crm.SoleraCRM;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,10 @@ class SoleraCrmApplicationTests {
 
 	@Test
 	void updateOportunityTest() {
-		Oportunity oUpdate = new Oportunity((long) 1, "UpdateTest","666333555", "test@solera.com", false, ContactDao.contacts);
-		oportunityDao.updateOportunity(oUpdate);
-		assertEquals(oportunityDao.findOne((long) 1).getName(), "UpdateTest");
-		assertEquals(oportunityDao.findOne((long) 1).getEmail(), "test@solera.com");
+		Oportunity oUpdate = new Oportunity(1, "UpdateTest","666333555", "test@solera.com", false, ContactDao.contacts);
+		oportunityDao.updateOportunity(1,oUpdate);
+		assertEquals(oportunityDao.findById(1).getName(), "UpdateTest");
+		assertEquals(oportunityDao.findById(1).getEmail(), "test@solera.com");
 	}
 
 }

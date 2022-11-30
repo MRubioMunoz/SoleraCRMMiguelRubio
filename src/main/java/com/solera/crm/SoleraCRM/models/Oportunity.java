@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Oportunity {
 
-	private Long idOportunity;
+	private Integer idOportunity;
 	private String name;
 	private String telephone;
 	private String email;
@@ -13,7 +13,7 @@ public class Oportunity {
 	
 	
 	
-	public Oportunity(Long idOportunity, String name, String telephone, String email, Boolean is_client,
+	public Oportunity(Integer idOportunity, String name, String telephone, String email, Boolean is_client,
 			List<Contact> contacts) {
 		this.idOportunity = idOportunity;
 		this.name = name;
@@ -22,10 +22,12 @@ public class Oportunity {
 		this.is_client = is_client;
 		this.contacts = contacts;
 	}
-	public Long getIdOportunity() {
+	
+	
+	public Integer getIdOportunity() {
 		return idOportunity;
 	}
-	public void setIdOportunity(Long idOportunity) {
+	public void setIdOportunity(Integer idOportunity) {
 		this.idOportunity = idOportunity;
 	}
 	public String getName() {
