@@ -9,7 +9,7 @@ public  class Contact{
 	private LocalDate date;
 	private Boolean result;
 
-	public Contact(Integer idContact, String type, LocalDate date, Boolean result, Integer idOportunity) {
+	public Contact(Integer idContact, String type, LocalDate date, Boolean result) {
 		this.idContact = idContact;
 		this.type = type;
 		this.date = date;

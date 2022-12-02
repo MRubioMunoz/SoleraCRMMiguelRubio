@@ -18,14 +18,18 @@ public class ContactDao {
 	@Autowired
 	OportunityDao oportunityDao;
 	
+	//Get the Contact list inside an opportunity
+	
 	public ArrayList<Contact> findByOportunitytId(Integer id){
 		return oportunityDao.findById(id).getContacts();
 	}
 	
-	public void createContactByOportunityId(Integer id, Contact contact) {
+	//Create a contact inside an oportunity
+	
+	public void createContactByOportunityId(Integer id, Contact contact) {	
 		contact.setidContact(++ID);
-		if(!oportunityDao.findById(id).getIs_client() && contact.getResult()) 
-			oportunityDao.findById(id).setIs_client(true);
+		if(!oportunityDao.findById(id).getClient() && contact.getResult()) 
+			oportunityDao.findById(id).setClient(true);
 		
 		oportunityDao.findById(id).getContacts().add(contact);
 		

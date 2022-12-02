@@ -8,17 +8,21 @@ public class Oportunity {
 	private String name;
 	private String telephone;
 	private String email;
-	private Boolean is_client;
+	private Boolean client;
 	private ArrayList<Contact> contacts;
 	
 	
 	
-	public Oportunity(Integer idOportunity, String name, String telephone, String email, Boolean is_client) {
+	public Oportunity(Integer idOportunity, String name, String telephone, String email, Boolean client) {
 		this.idOportunity = idOportunity;
 		this.name = name;
 		this.telephone = telephone;
 		this.email = email;
-		this.is_client = is_client;
+		this.client = client;
+		this.contacts = new ArrayList<>();
+	}
+	
+	public Oportunity() {
 		this.contacts = new ArrayList<>();
 	}
 	
@@ -47,11 +51,11 @@ public class Oportunity {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Boolean getIs_client() {
-		return is_client;
+	public Boolean getClient() {
+		return client;
 	}
-	public void setIs_client(Boolean is_client) {
-		this.is_client = is_client;
+	public void setClient(Boolean client) {
+		this.client = client;
 	}
 	public ArrayList<Contact> getContacts() {
 		return contacts;
